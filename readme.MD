@@ -1,4 +1,4 @@
-# Fourier Transform CALCULATOR
+# Fourier Transform Calculator
 
 
 <p align="center"> This program calculates a continuous digital signal with fourier transform and shows it in a chart</p>
