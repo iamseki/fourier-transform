@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="transform.js"> </script>
+    <script>
+        // MUDE ESTA VARIÁVEL PARA VER O GRÁFICO COM NÚMERO DE TERMOS DESEJADO DA SERIE DA FOURIER
+        // A FREQUENCIA ESTÁ FIXADA FINAL RA * 100 COMO SOLICITADO PELO TEACHER
+        // SE PRECISAR ALTERAR ALTERE DIRETO EM transform.js 
+        const TERMOS = 5
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: `Transformada Fourier - ${TERMOS} Termos`
+                },
+                data: [{
+                    type: "line",
+                    indexLabelFontSize: 16,
+                    dataPoints: getData(TERMOS)
+                }],
+                axisX: {
+                    title: "[s]"
+                }
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>
